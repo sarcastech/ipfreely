@@ -1,0 +1,24 @@
+{
+  "name": "ipfreely",
+  "version": "1.0.0",
+  "description": "Get the IP address of your favorite domains. Freely.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarcastech/ipfreely.git"
+  },
+  "keywords": [
+    "IP",
+    "IPaddress",
+    "Domain"
+  ],
+  "author": "Sarcastech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarcastech/ipfreely/issues"
+  },
+  "homepage": "https://github.com/sarcastech/ipfreely#readme"
+}
