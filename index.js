@@ -3,16 +3,13 @@
 let exec = require('child_process').exec
 let fs = require('fs')
 let stream = require('stream')
+let errorHandler = require('./lib/error-handler')
 let dataStream = new stream.Readable()
 dataStream._read = function () {}
-dataStream.on('error', function (err) {
-  console.log('Read Error: ', err)
-})
+dataStream.on('error', errorHandler)
 
 let fileWriter = fs.createWriteStream('ips.txt')
-fileWriter.on('error', function (err) {
-  console.log('Write Error: ', err)
-})
+fileWriter.on('error', errorHandler)
 
 dataStream.pipe(fileWriter)
 
@@ -20,7 +17,7 @@ let ipfreely = function (sites) {
   sites.forEach((site) => {
     exec(`dig +short ${site}`, (err, output) => {
       if (err) {
-        console.log(`Error getting site ${site}`)
+        errorHandler(err)
         return false
       }
 
