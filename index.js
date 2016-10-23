@@ -2,7 +2,6 @@
 
 let exec = require('child_process').exec
 let stream = require('stream')
-let errorHandler = require('./lib/error-handler')
 
 function ipfreely (siteList) {
   let readStream = new stream.Readable()
@@ -11,8 +10,7 @@ function ipfreely (siteList) {
   siteList.forEach((site) => {
     exec(`dig +short ${site}`, (err, output) => {
       if (err) {
-        errorHandler(err)
-        return false
+        readStream.emit('error', err)
       }
 
       readStream.push(`${site}: ${output.match(/^[0-9\.]+/)[0]}\n`)
