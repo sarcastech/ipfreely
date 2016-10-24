@@ -13,7 +13,7 @@ function ipfreely (siteList) {
         readStream.emit('error', err)
       }
 
-      readStream.push(`${site}: ${output.match(/^[0-9\.]+/)[0]}\n`)
+      readStream.push(`${site}:${output.match(/^[0-9\.]+/)[0]}\n`)
     })
   })
 
