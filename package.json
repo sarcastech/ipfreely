@@ -4,7 +4,7 @@
   "description": "Get the IP address of your favorite domains. Freely.",
   "main": "index.js",
   "scripts": {
-    "test": "ava spec.js"
+    "test": "ava test/spec.js"
   },
   "files": [
     "*.js"
