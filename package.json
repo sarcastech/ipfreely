@@ -4,7 +4,7 @@
   "description": "Get the IP address of your favorite domains. Freely.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava spec.js"
   },
   "files": [
     "*.js"
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/sarcastech/ipfreely/issues"
   },
-  "homepage": "https://github.com/sarcastech/ipfreely#readme"
+  "homepage": "https://github.com/sarcastech/ipfreely#readme",
+  "devDependencies": {
+    "ava": "^0.17.0"
+  }
 }
