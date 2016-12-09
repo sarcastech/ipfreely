@@ -1,6 +1,6 @@
 {
   "name": "ipfreely",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the IP address of your favorite domains. Freely.",
   "main": "index.js",
   "scripts": {
