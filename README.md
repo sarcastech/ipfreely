@@ -18,7 +18,7 @@ let writeStream = fs.createWriteStream('iplist.txt')
 ipfreely(['google.com', 'github.com', 'js.foundation'])
   .pipe(writeStream)
 ```
-## Caveat
-This module makes use of [dig](https://linux.die.net/man/1/dig), which is super if you're running Linux or OSX.
-However, if you happen to be using Windows, you can try your hand at [installing it yourself](http://www.danesparza.net/2011/05/using-the-dig-dns-tool-on-windows-7/), but
-you'd be venturing into territory I had no interest in visiting.
+
+## Changelog
+- v1.0.1: replace executing [dig](https://linux.die.net/man/1/dig) via `child_process.exec()` with Node's `dns.resolve()`
+- v1.0.0: Initial release
